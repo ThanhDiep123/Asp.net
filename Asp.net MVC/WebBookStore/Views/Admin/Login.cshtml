@@ -1,0 +1,60 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+
+    <meta charset="UTF-8" />
+    <meta name="Designer" content="PremiumPixels.com">
+    <meta name="Author" content="$hekh@r d-Ziner, CSSJUNTION.com">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/structure.css">
+    <link href="~/Content/css/reset.css" rel="stylesheet" />
+    <link href="~/Content/css/structure.css" rel="stylesheet" />
+    <title>Bootstrap login Form Tempate</title>
+</head>
+
+<body>
+    <form class="box login" method="post">
+
+        <h4></h4>
+        <div class="form-top-left">
+            <h4>ĐĂNG NHẬP HỆ THỐNG QUẢN TRỊ</h4>
+            <p>Vui lòng nhập User Name và Password</p>
+            <h4 style="color:red; text-align:center"> @ViewBag.Thongbao</h4>
+        </div>
+        <div class="form-top-right">
+            <i class="fade fa-key"></i>
+        </div>
+        <div class="form-bottom"></div>
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+    <div class="form-group">
+        <label class="sr-only" for="form-username">Username:</label>
+        <input type="text" name="username" placeholder="Username..." class="form-username form-control" id="form-username">
+        @ViewData["Loi1"]
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="form-password">Password:</label>
+        <input type="password" name="password" placeholder="Password..." class="form-password form-control" id="form-password">
+        @ViewData["Loi2"]
+    </div>
+    <button type="submit" class="btn">Đăng Nhập</button>
+          
+
+
+        }
+    </form>    
+        
+        <footer id="main">
+            <a href="http://wwww.cssjunction.com">Simple Login Form (HTML5/CSS3 Coded) by CSS Junction</a> | <a href="http://www.premiumpixels.com">PSD by Premium Pixels</a>
+        </footer>
+    </body>
+</html>
+

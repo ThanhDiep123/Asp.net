@@ -1,0 +1,58 @@
+﻿@model IEnumerable<WebBookStore.Models.asp_2120120212>
+
+@{
+    ViewBag.Title = "Diep_2120120212";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2>Diep_2120120212</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TENSV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SODT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIACHI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMAIL)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TENSV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SODT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIACHI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMAIL)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MSSV }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MSSV }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MSSV })
+        </td>
+    </tr>
+}
+
+</table>
